@@ -1,3 +1,8 @@
+<!-- default file list -->
+*Files to look at*:
+
+* [Program.cs](./CS/AddFormFieldsToNewDocument/Program.cs) (VB: [Program.vb](./VB/AddFormFieldsToNewDocument/Program.vb))
+<!-- default file list end -->
 # How to create an interactive form
 
 
