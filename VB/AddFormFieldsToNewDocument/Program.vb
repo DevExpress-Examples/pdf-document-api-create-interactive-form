@@ -1,5 +1,6 @@
 Imports DevExpress.Pdf
 Imports System.Drawing
+Imports System.Diagnostics
 
 Namespace AddFormFieldsToNewDocument
 
@@ -7,8 +8,8 @@ Namespace AddFormFieldsToNewDocument
 
         Shared Sub Main(ByVal args As String())
             Using processor As PdfDocumentProcessor = New PdfDocumentProcessor()
-                ' Create an empty document. 
-                processor.CreateEmptyDocument("..\..\Result.pdf")
+                ' Create an empty document.
+                processor.CreateEmptyDocument("..\..\..\Result.pdf")
                 ' Create graphics and draw form fields.
                 Using graphics As PdfGraphics = processor.CreateGraphics()
                     DrawFormFields(graphics)
@@ -16,6 +17,8 @@ Namespace AddFormFieldsToNewDocument
                     processor.RenderNewPage(PdfPaperSize.Letter, graphics)
                 End Using
             End Using
+            Process.Start(New ProcessStartInfo("..\..\..\Result.pdf") With {.UseShellExecute = True})
+
         End Sub
 
         Private Shared Sub DrawFormFields(ByVal graphics As PdfGraphics)
@@ -33,7 +36,7 @@ Namespace AddFormFieldsToNewDocument
             radioGroup.AddButton("button1", New RectangleF(30, 60, 20, 20))
             ' Add the second radio button to the group.
             radioGroup.AddButton("button2", New RectangleF(30, 90, 20, 20))
-            ' Specify radio group selected index, and appearance. 
+            ' Specify radio group selected index, and appearance.
             radioGroup.SelectedIndex = 0
             radioGroup.Appearance.BorderAppearance = New PdfGraphicsAcroFormBorderAppearance() With {.Color = Color.Red, .Width = 3}
             ' Add the radio group field to graphics.

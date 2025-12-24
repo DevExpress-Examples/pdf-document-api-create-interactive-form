@@ -1,13 +1,14 @@
 ﻿using DevExpress.Pdf;
 using System.Drawing;
+using System.Diagnostics;
 
 namespace AddFormFieldsToNewDocument {
     class Program {
         static void Main(string[] args) {
             using (PdfDocumentProcessor processor = new PdfDocumentProcessor()) {
 
-                // Create an empty document. 
-                processor.CreateEmptyDocument("..\\..\\Result.pdf");
+                // Create an empty document.
+                processor.CreateEmptyDocument("..\\..\\..\\Result.pdf");
 
                 // Create graphics and draw form fields.
                 using (PdfGraphics graphics = processor.CreateGraphics()) {
@@ -17,6 +18,8 @@ namespace AddFormFieldsToNewDocument {
                     processor.RenderNewPage(PdfPaperSize.Letter, graphics);
                 }
             }
+            Process.Start(new ProcessStartInfo("..\\..\\..\\Result.pdf") { UseShellExecute = true });
+
         }
 
         static void DrawFormFields(PdfGraphics graphics) {
@@ -41,7 +44,7 @@ namespace AddFormFieldsToNewDocument {
             // Add the second radio button to the group.
             radioGroup.AddButton("button2", new RectangleF(30, 90, 20, 20));
 
-            // Specify radio group selected index, and appearance. 
+            // Specify radio group selected index, and appearance.
             radioGroup.SelectedIndex = 0;
             radioGroup.Appearance.BorderAppearance = new PdfGraphicsAcroFormBorderAppearance() { Color = Color.Red, Width = 3 };
 

@@ -4,18 +4,16 @@
 [![](https://img.shields.io/badge/📖_How_to_use_DevExpress_Examples-e9f6fc?style=flat-square)](https://docs.devexpress.com/GeneralInformation/403183)
 [![](https://img.shields.io/badge/💬_Leave_Feedback-feecdd?style=flat-square)](#does-this-example-address-your-development-requirementsobjectives)
 <!-- default badges end -->
+
+# PDF Document API - Create an Interactive Form
+
+This example uses the [PdfGraphics](https://docs.devexpress.com/OfficeFileAPI/DevExpress.Pdf.PdfGraphics) object to add interactive form fields (e.g., text box and radio button group fields) to a PDF document.
+
 <!-- default file list -->
-*Files to look at*:
+## Files to Review
 
 * [Program.cs](./CS/AddFormFieldsToNewDocument/Program.cs) (VB: [Program.vb](./VB/AddFormFieldsToNewDocument/Program.vb))
 <!-- default file list end -->
-# PDF Document API - Create an Interactive Form
-
-
-This example shows how to add interactive form fields (e.g., text box and radio button group fields) to a PDF document using a <a href="https://documentation.devexpress.com/#CoreLibraries/clsDevExpressPdfPdfGraphicstopic">PdfGraphics</a> object.
-
-<br/>
-
 
 <!-- feedback -->
 ## Does this example address your development requirements/objectives?
