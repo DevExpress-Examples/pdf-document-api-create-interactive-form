@@ -2,16 +2,16 @@
 
   <PropertyGroup>
     <OutputType>Exe</OutputType>
-    <TargetFramework>net8.0</TargetFramework>
+    <TargetFramework>net10.0</TargetFramework>
     <ImplicitUsings>enable</ImplicitUsings>
     <Nullable>enable</Nullable>
     <TreatWarningsAsErrors>true</TreatWarningsAsErrors>
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="DevExpress.Drawing.Skia" Version="24.2.12" />
-    <PackageReference Include="DevExpress.Pdf.Drawing" Version="24.2.12" />
-    <PackageReference Include="DevExpress.Document.Processor" Version="24.2.12" />
+    <PackageReference Include="DevExpress.Drawing.Skia" Version="26.1.5" />
+    <PackageReference Include="DevExpress.Pdf.Drawing" Version="26.1.5" />
+    <PackageReference Include="DevExpress.Document.Processor" Version="26.1.5" />
   </ItemGroup>
 
 </Project>
